@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happykids — Ra Mắt Bộ Sưu Tập 2025</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+
+:root {
+  --bg:          #FDF0F3;
+  --bg-alt:      #F7DCE3;
+  --bg-dark:     #2D1018;
+  --cream:       #FFF5F7;
+  --blush:       #E8547A;
+  --blush-light: #F4AABF;
+  --sage:        #D47F9B;
+  --sage-light:  #F0C5D2;
+  --text:        #1F0A0F;
+  --text-mid:    #6B3048;
+  --text-light:  #B07088;
+  --border:      rgba(107,48,72,0.12);
+  --border-dark: rgba(255,255,255,0.1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Jost', sans-serif;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+.serif { font-family: 'DM Serif Display', serif; }
+
+.reveal {
+  opacity: 0; transform: translateY(32px);
+  transition: opacity 0.8s cubic-bezier(.16,1,.3,1), transform 0.8s cubic-bezier(.16,1,.3,1);
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-up { opacity: 0; transform: translateY(48px);
+  transition: opacity 0.9s cubic-bezier(.16,1,.3,1), transform 0.9s cubic-bezier(.16,1,.3,1); }
+.reveal-up.visible { opacity: 1; transform: translateY(0); }
+
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 22px 64px;
+  background: rgba(253,240,243,0.9);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+}
+.logo {
+  font-family: 'DM Serif Display', serif;
+  font-size: 22px; letter-spacing: 0.02em; color: var(--text);
+}
+.logo span { color: var(--blush); font-style: italic; }
+.nav-links {
+  display: flex; gap: 40px; list-style: none;
+}
+.nav-links a {
+  font-size: 12.5px; font-weight: 600; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--text-mid);
+  text-decoration: none; transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--text); }
+.nav-btn {
+  font-family: 'Jost', sans-serif; font-size: 12.5px; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 12px 28px; border-radius: 2px;
+  background: var(--blush); color: var(--cream);
+  border: none; cursor: pointer; transition: all 0.25s;
+}
+.nav-btn:hover { background: var(--text); color: var(--cream); }
+
+.hero {
+  height: 100vh; min-height: 700px;
+  position: relative;
+  display: flex; align-items: flex-end;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute; inset: 0;
+  background-color: var(--bg-alt);
+}
+.hero-bg img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center right;
+  display: block;
+}
+.hero-bg::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(45,16,24,0.75) 0%,
+    rgba(45,16,24,0.32) 55%,
+    rgba(45,16,24,0) 100%
+  );
+}
+
+.hero-placeholder {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  flex-direction: column; gap: 12px;
+}
+.hero-placeholder .ph-label {
+  font-size: 13px; font-weight: 600; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--text-light);
+  background: var(--bg); padding: 10px 20px; border-radius: 2px;
+  border: 1.5px dashed var(--border);
+}
+.hero-placeholder .ph-size { font-size: 12px; color: var(--text-light); }
+
+.hero-content {
+  position: relative; z-index: 2;
+  padding: 0 80px 90px;
+  max-width: 660px;
+}
+.hero-eyebrow {
+  font-size: 11.5px; font-weight: 600; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--blush-light);
+  margin-bottom: 24px;
+  display: flex; align-items: center; gap: 14px;
+}
+.hero-eyebrow::before {
+  content: ''; width: 36px; height: 1px; background: var(--blush);
+}
+.hero-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(52px, 6.5vw, 88px);
+  line-height: 1.05; color: var(--cream);
+  margin-bottom: 28px;
+}
+.hero-title em { font-style: italic; color: var(--blush-light); }
+.hero-desc {
+  font-size: 16px; font-weight: 300; line-height: 1.85;
+  color: rgba(255,245,247,0.75); max-width: 420px; margin-bottom: 44px;
+}
+.hero-ctas { display: flex; gap: 16px; align-items: center; }
+.cta-primary {
+  font-family: 'Jost', sans-serif; font-size: 13.5px; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 17px 40px; background: var(--blush); color: var(--cream);
+  border: none; border-radius: 2px; cursor: pointer; transition: all 0.3s;
+}
+.cta-primary:hover { background: var(--cream); color: var(--text); }
+.cta-ghost {
+  font-family: 'Jost', sans-serif; font-size: 13.5px; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 17px 32px; background: transparent;
+  color: var(--cream); border: 1.5px solid rgba(255,245,247,0.4);
+  border-radius: 2px; cursor: pointer; transition: all 0.3s;
+}
+.cta-ghost:hover { border-color: var(--cream); }
+
+.hero-stats {
+  position: absolute; bottom: 0; left: 0; right: 0; z-index: 2;
+  display: flex; background: rgba(45,16,24,0.85); backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+.stat-item {
+  flex: 1; padding: 22px 40px; border-right: 1px solid rgba(255,255,255,0.06);
+  display: flex; align-items: baseline; gap: 12px;
+}
+.stat-item:last-child { border-right: none; }
+.stat-num {
+  font-family: 'DM Serif Display', serif;
+  font-size: 28px; color: var(--cream);
+}
+.stat-label {
+  font-size: 12px; font-weight: 500; letter-spacing: 0.06em;
+  text-transform: uppercase; color: rgba(255,245,247,0.45);
+}
+
+.story {
+  display: grid; grid-template-columns: 55fr 45fr;
+  min-height: 680px; overflow: hidden;
+}
+
+.story-img {
+  position: relative; overflow: hidden;
+  background-color: var(--bg-alt);
+}
+.story-img img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center;
+  display: block;
+  transition: transform 0.8s ease;
+}
+.story-img:hover img { transform: scale(1.03); }
+
+.story-img .ph-wrap {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  flex-direction: column; gap: 10px;
+}
+
+.story-text {
+  background: var(--cream); padding: 90px 80px;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.section-tag {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--blush);
+  margin-bottom: 20px;
+  display: flex; align-items: center; gap: 12px;
+}
+.section-tag::after { content: ''; flex: 1; height: 1px; background: var(--blush-light); }
+.story-heading {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(36px, 3.5vw, 52px); line-height: 1.12;
+  color: var(--text); margin-bottom: 28px;
+}
+.story-heading em { font-style: italic; color: var(--blush); }
+.story-body {
+  font-size: 15.5px; font-weight: 300; line-height: 1.9;
+  color: var(--text-mid); margin-bottom: 48px;
+}
+.story-body p + p { margin-top: 18px; }
+.milestones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.ms {
+  padding-top: 22px;
+  border-top: 1.5px solid var(--border);
+}
+.ms-num {
+  font-family: 'DM Serif Display', serif;
+  font-size: 38px; color: var(--text); line-height: 1;
+  margin-bottom: 6px;
+}
+.ms-num sup { font-size: 18px; color: var(--blush); }
+.ms-label { font-size: 12px; font-weight: 600; letter-spacing: 0.06em; color: var(--text-light); text-transform: uppercase; }
+
+.why { background: var(--bg-dark); padding: 120px 80px; }
+.why-header {
+  display: flex; align-items: flex-end; justify-content: space-between;
+  margin-bottom: 70px; gap: 40px;
+}
+.why-heading {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(40px, 4vw, 60px); line-height: 1.1;
+  color: var(--cream);
+}
+.why-heading em { font-style: italic; color: var(--blush); }
+.why-sub {
+  max-width: 340px; font-size: 15px; font-weight: 300; line-height: 1.8;
+  color: rgba(255,245,247,0.5); text-align: right;
+}
+.why-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.06);
+}
+.why-card {
+  background: var(--bg-dark); padding: 44px 40px;
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: background 0.3s;
+  position: relative; overflow: hidden;
+}
+.why-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(to right, var(--blush), transparent);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 0.4s ease;
+}
+.why-card:hover { background: rgba(255,255,255,0.04); }
+.why-card:hover::before { transform: scaleX(1); }
+.why-num {
+  font-family: 'DM Serif Display', serif;
+  font-size: 13px; color: rgba(232,84,122,0.45);
+  letter-spacing: 0.1em; margin-bottom: 32px;
+}
+.why-card h3 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 22px; color: var(--cream); margin-bottom: 14px; line-height: 1.3;
+}
+.why-card p { font-size: 14px; font-weight: 300; line-height: 1.8; color: rgba(255,245,247,0.5); }
+.why-tag {
+  display: inline-block; margin-top: 22px;
+  font-size: 10.5px; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--blush);
+  border-bottom: 1px solid var(--blush); padding-bottom: 3px;
+}
+
+.collection { padding: 120px 80px; background: var(--bg); }
+.col-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 60px; }
+.col-heading {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(38px, 4vw, 56px); line-height: 1.1; color: var(--text);
+}
+.col-heading em { font-style: italic; color: var(--blush); }
+.col-filter { display: flex; gap: 6px; }
+.filter-btn {
+  font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 9px 20px; border-radius: 1px;
+  background: transparent; color: var(--text-mid);
+  border: 1px solid var(--border); cursor: pointer; transition: all 0.2s;
+}
+.filter-btn.active, .filter-btn:hover { background: var(--blush); color: var(--cream); border-color: var(--blush); }
+
+.product-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.product-card {
+  cursor: pointer;
+  transition: transform 0.35s cubic-bezier(.16,1,.3,1);
+}
+.product-card:hover { transform: translateY(-8px); }
+
+.product-img {
+  aspect-ratio: 5/6; overflow: hidden;
+  position: relative; margin-bottom: 20px;
+  background: var(--bg-alt);
+}
+.product-img img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center;
+  display: block;
+  transition: transform 0.6s ease;
+}
+.product-card:hover .product-img img { transform: scale(1.06); }
+
+.product-img .prod-badge {
+  position: absolute; top: 16px; left: 16px;
+  font-size: 10px; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; background: var(--blush);
+  color: var(--cream); padding: 6px 14px;
+}
+
+.product-img .ph-wrap {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
+}
+
+.product-name {
+  font-size: 16px; font-weight: 500; color: var(--text); margin-bottom: 6px;
+}
+.product-meta { font-size: 13px; font-weight: 300; color: var(--text-light); margin-bottom: 14px; }
+.product-footer { display: flex; align-items: center; justify-content: space-between; }
+.product-price {
+  font-family: 'DM Serif Display', serif;
+  font-size: 22px; color: var(--text);
+}
+.pre-btn {
+  font-family: 'Jost', sans-serif; font-size: 11.5px; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 10px 20px; background: var(--blush); color: var(--cream);
+  border: none; cursor: pointer; transition: background 0.2s;
+}
+.pre-btn:hover { background: var(--text); }
+
+.testimonials { background: var(--bg-alt); padding: 120px 80px; }
+.test-header { text-align: center; margin-bottom: 70px; }
+.test-heading {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(36px, 4vw, 54px); color: var(--text); margin-bottom: 14px;
+}
+.test-heading em { font-style: italic; color: var(--blush); }
+.test-sub { font-size: 15px; font-weight: 300; color: var(--text-mid); }
+.test-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+.test-card {
+  background: var(--cream); padding: 48px 40px;
+  border: 1px solid var(--border);
+  transition: background 0.3s;
+}
+.test-card:hover { background: white; }
+.test-rating {
+  display: flex; gap: 3px; margin-bottom: 22px;
+}
+.star {
+  width: 14px; height: 14px; background: var(--blush);
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+.test-quote {
+  font-family: 'DM Serif Display', serif; font-style: italic;
+  font-size: 18px; line-height: 1.65; color: var(--text); margin-bottom: 32px;
+}
+.test-author { display: flex; align-items: center; gap: 16px; }
+
+.test-avatar {
+  width: 48px; height: 48px; border-radius: 50%; overflow: hidden;
+  background: var(--blush-light); flex-shrink: 0;
+}
+.test-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.test-name { font-size: 14px; font-weight: 600; color: var(--text); }
+.test-role { font-size: 12.5px; font-weight: 400; color: var(--text-light); margin-top: 2px; }
+
+.register {
+  display: grid; grid-template-columns: 1fr 1fr;
+  min-height: 600px; overflow: hidden;
+}
+
+.reg-img {
+  position: relative; overflow: hidden;
+  background: var(--bg-alt);
+}
+.reg-img img {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+}
+.reg-img .ph-wrap {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
+}
+
+.reg-form-wrap {
+  background: var(--bg-dark);
+  padding: 90px 72px;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.reg-tag {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--blush);
+  margin-bottom: 20px;
+}
+.reg-heading {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(32px, 3vw, 46px); line-height: 1.1;
+  color: var(--cream); margin-bottom: 14px;
+}
+.reg-heading em { font-style: italic; }
+.reg-desc { font-size: 14.5px; font-weight: 300; color: rgba(255,245,247,0.5); line-height: 1.75; margin-bottom: 40px; }
+
+.form-field { margin-bottom: 16px; }
+.form-field label {
+  display: block; font-size: 11px; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: rgba(255,245,247,0.4); margin-bottom: 8px;
+}
+.form-field input,
+.form-field select {
+  width: 100%; padding: 14px 18px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: var(--cream); font-family: 'Jost', sans-serif; font-size: 15px;
+  outline: none; border-radius: 1px; transition: border-color 0.2s;
+  -webkit-appearance: none;
+}
+.form-field input::placeholder { color: rgba(255,245,247,0.25); }
+.form-field input:focus, .form-field select:focus { border-color: var(--blush); }
+.form-field select option { background: var(--bg-dark); color: var(--cream); }
+.form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.submit-btn {
+  width: 100%; margin-top: 10px;
+  padding: 17px; background: var(--blush); color: var(--cream);
+  font-family: 'Jost', sans-serif; font-size: 13.5px; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  border: none; cursor: pointer; transition: all 0.3s; border-radius: 1px;
+}
+.submit-btn:hover { background: var(--cream); color: var(--text); }
+.form-perks {
+  display: flex; gap: 28px; margin-top: 28px; flex-wrap: wrap;
+}
+.perk { font-size: 12px; font-weight: 500; color: rgba(255,245,247,0.45); letter-spacing: 0.04em; }
+.perk::before { content: '— '; }
+.form-note { font-size: 12px; color: rgba(255,245,247,0.25); margin-top: 14px; }
+
+.success-msg { display: none; text-align: center; padding: 40px 0; }
+.success-msg.show { display: block; }
+.success-msg h3 { font-family: 'DM Serif Display', serif; font-size: 32px; color: var(--cream); margin-bottom: 12px; }
+.success-msg p { font-size: 15px; color: rgba(255,245,247,0.5); }
+
+footer {
+  background: var(--text); color: rgba(255,245,247,0.5);
+  padding: 64px 80px 28px;
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px;
+}
+.footer-logo { font-family: 'DM Serif Display', serif; font-size: 24px; color: var(--cream); margin-bottom: 16px; }
+.footer-logo span { font-style: italic; color: var(--blush); }
+footer p { font-size: 14px; font-weight: 300; line-height: 1.8; max-width: 240px; }
+footer h5 { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,245,247,0.3); margin-bottom: 20px; }
+footer ul { list-style: none; display: flex; flex-direction: column; gap: 11px; }
+footer ul a { text-decoration: none; font-size: 14px; font-weight: 300; color: rgba(255,245,247,0.5); transition: color 0.2s; }
+footer ul a:hover { color: var(--cream); }
+.footer-bottom {
+  text-align: center; padding: 20px 80px;
+  background: rgba(0,0,0,0.2);
+  font-size: 12.5px; color: rgba(255,245,247,0.25); letter-spacing: 0.04em;
+}
+
+.toast {
+  position: fixed; bottom: 32px; right: 32px; z-index: 999;
+  background: var(--blush); color: var(--cream);
+  padding: 14px 26px; font-size: 13.5px; font-weight: 600; letter-spacing: 0.04em;
+  border-left: 3px solid var(--text);
+  box-shadow: 0 12px 36px rgba(45,16,24,0.25);
+  transform: translateY(80px); opacity: 0;
+  transition: all 0.4s cubic-bezier(.16,1,.3,1);
+}
+.toast.show { transform: translateY(0); opacity: 1; }
+
+.ph-label {
+  font-size: 12px; font-weight: 600; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--text-light);
+  background: rgba(255,255,255,0.5); padding: 10px 18px;
+  border: 1.5px dashed var(--text-light);
+}
+.ph-label.dark { background: rgba(255,255,255,0.06); color: rgba(255,245,247,0.3); border-color: rgba(255,255,255,0.15); }
+.ph-size { font-size: 11.5px; color: var(--text-light); }
+.ph-size.dark { color: rgba(255,245,247,0.2); }
+
+@media (max-width: 1024px) {
+  nav { padding: 18px 32px; }
+  .nav-links { display: none; }
+  .hero-content { padding: 0 40px 80px; }
+  .hero-stats .stat-item { padding: 18px 24px; }
+  .story { grid-template-columns: 1fr; }
+  .story-img { height: 420px; }
+  .story-text { padding: 64px 40px; }
+  .why { padding: 80px 40px; }
+  .why-grid { grid-template-columns: 1fr; }
+  .collection { padding: 80px 40px; }
+  .product-grid { grid-template-columns: repeat(2, 1fr); }
+  .testimonials { padding: 80px 40px; }
+  .test-grid { grid-template-columns: 1fr; }
+  .register { grid-template-columns: 1fr; }
+  .reg-img { height: 360px; }
+  .reg-form-wrap { padding: 64px 40px; }
+  footer { grid-template-columns: 1fr 1fr; padding: 50px 40px 24px; }
+  .footer-bottom { padding: 18px 40px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Happy<span>kids</span></div>
+  <ul class="nav-links">
+    <li><a href="#story">Câu chuyện</a></li>
+    <li><a href="#collection">Bộ sưu tập</a></li>
+    <li><a href="#why">Cam kết</a></li>
+    <li><a href="#register">Đặt trước</a></li>
+  </ul>
+  <button class="nav-btn" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})">Đặt trước</button>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-bg">
+    <!-- <img src="your-hero-image.jpg" alt="Happykids — Bộ sưu tập 2025"> -->
+    <div class="hero-placeholder">
+      <div class="ph-label dark">Ảnh Hero — Background toàn màn hình</div>
+      <div class="ph-size dark">Kích thước: 1920 × 1080px — Chủ thể nằm bên phải</div>
+    </div>
+  </div>
+
+  <div class="hero-content reveal-up">
+    <p class="hero-eyebrow">Ra mắt tháng 6, 2025</p>
+    <h1 class="hero-title">
+      Nhẹ nhàng<br>như làn da<br><em>của bé yêu</em>
+    </h1>
+    <p class="hero-desc">
+      Bộ sưu tập sơ sinh Happykids — 100% cotton hữu cơ GOTS, được kiểm định da liễu độc lập, thiết kế từ góc nhìn của người mẹ.
+    </p>
+    <div class="hero-ctas">
+      <button class="cta-primary" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})">Đặt trước — Ưu đãi sớm</button>
+      <button class="cta-ghost" onclick="document.getElementById('story').scrollIntoView({behavior:'smooth'})">Xem câu chuyện</button>
+    </div>
+  </div>
+
+  <div class="hero-stats">
+    <div class="stat-item">
+      <div class="stat-num">2,400<sup style="font-size:14px;color:var(--blush)">+</sup></div>
+      <div class="stat-label">Bé yêu đã tin dùng</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">98<sup style="font-size:14px;color:var(--blush)">%</sup></div>
+      <div class="stat-label">Mẹ hài lòng</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">0</div>
+      <div class="stat-label">Hoá chất độc hại</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">GOTS</div>
+      <div class="stat-label">Chứng nhận quốc tế</div>
+    </div>
+  </div>
+</section>
+
+
+<section class="story" id="story">
+  <div class="story-img reveal-up">
+    <!-- <img src="your-story-image.jpg" alt="Câu chuyện Happykids"> -->
+     <img src="be1.jpg" alt="Set Welcome Baby">
+    <div class="ph-wrap">
+    </div>
+  </div>
+
+  <div class="story-text">
+    <p class="section-tag">Câu chuyện của chúng tôi</p>
+    <h2 class="story-heading reveal">
+      Mỗi sản phẩm<br>là <em>một vòng tay</em><br>của mẹ
+    </h2>
+    <div class="story-body reveal">
+      <p>Happykids được tạo ra bởi những người mẹ, cho những người mẹ. Khi cô sáng lập Linh Nguyễn không tìm được bộ đồ nào thực sự an toàn cho bé trai nhỏ của mình — cô quyết định tự tạo ra nó.</p>
+      <p>Từ những thử nghiệm đầu tiên, đến xưởng dệt thủ công tại Đà Lạt với 100% cotton hữu cơ được kiểm định quốc tế — Happykids được xây dựng trên một triết lý duy nhất: an toàn tuyệt đối, mềm mại tuyệt đối.</p>
+    </div>
+    <div class="milestones reveal">
+      <div class="ms">
+        <div class="ms-num">2<sup>K+</sup></div>
+        <div class="ms-label">Bé tin dùng</div>
+      </div>
+      <div class="ms">
+        <div class="ms-num">98<sup>%</sup></div>
+        <div class="ms-label">Mẹ hài lòng</div>
+      </div>
+      <div class="ms">
+        <div class="ms-num">0</div>
+        <div class="ms-label">Hoá chất</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="why" id="why">
+  <div class="why-header">
+    <h2 class="why-heading reveal">
+      Vì sao<br>chọn <em>Happykids</em>
+    </h2>
+    <p class="why-sub reveal">Không phải lời hứa — đây là những tiêu chuẩn được kiểm định, kiểm tra, và công bố minh bạch.</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-card reveal">
+      <div class="why-num">01</div>
+      <h3>Vải cotton hữu cơ GOTS</h3>
+      <p>Chứng nhận toàn cầu GOTS — không thuốc nhuộm độc hại, không formaldehyde, không kim loại nặng.</p>
+      <span class="why-tag">Chứng nhận quốc tế</span>
+    </div>
+    <div class="why-card reveal" style="transition-delay:.1s">
+      <div class="why-num">02</div>
+      <h3>Kiểm định da liễu độc lập</h3>
+      <p>Mỗi lô sản phẩm được test bởi phòng lab độc lập. Kết quả công bố công khai — không có gì để giấu.</p>
+      <span class="why-tag">Minh bạch tuyệt đối</span>
+    </div>
+    <div class="why-card reveal" style="transition-delay:.2s">
+      <div class="why-num">03</div>
+      <h3>Thiết kế từ góc nhìn mẹ</h3>
+      <p>Cúc bấm dễ mở lúc 3 giờ sáng. Đường may ngoài không tạo vết đỏ. Cổ rộng tháo dễ qua đầu bé.</p>
+      <span class="why-tag">Thực tiễn</span>
+    </div>
+    <div class="why-card reveal" style="transition-delay:.3s">
+      <div class="why-num">04</div>
+      <h3>Không co rút sau 50 lần giặt</h3>
+      <p>Công nghệ preshrunk đặc biệt giữ form dáng và màu sắc. Bộ đồ tháng 1 vẫn đẹp đến tháng 6.</p>
+      <span class="why-tag">Độ bền cao</span>
+    </div>
+    <div class="why-card reveal" style="transition-delay:.4s">
+      <div class="why-num">05</div>
+      <h3>Hộp quà cao cấp miễn phí</h3>
+      <p>Mỗi đơn đến trong hộp kraft thủ công kèm thiệp viết tay. Hoàn hảo để tặng baby shower.</p>
+      <span class="why-tag">Gift-ready</span>
+    </div>
+    <div class="why-card reveal" style="transition-delay:.5s">
+      <div class="why-num">06</div>
+      <h3>Cam kết bền vững</h3>
+      <p>Bao bì 100% tái chế. 1% doanh thu đóng góp quỹ trồng rừng Việt Nam.</p>
+      <span class="why-tag">Eco-conscious</span>
+    </div>
+  </div>
+</section>
+
+
+<section class="collection" id="collection">
+  <div class="col-header">
+    <div>
+      <p class="section-tag" style="max-width:300px">Bộ sưu tập</p>
+      <h2 class="col-heading reveal">Ra mắt <em>tháng 6</em></h2>
+    </div>
+    <div class="col-filter reveal">
+      <button class="filter-btn active">Tất cả</button>
+      <button class="filter-btn">0–3 tháng</button>
+      <button class="filter-btn">3–6 tháng</button>
+      <button class="filter-btn">6–12 tháng</button>
+    </div>
+  </div>
+
+  <div class="product-grid">
+    <div class="product-card reveal">
+      <div class="product-img">
+<!-- <img src="be2.jpg" alt="Body Suit Cloud"> -->
+ <img src="be2.jpg" alt="Set Welcome Baby">
+        <span class="prod-badge">New</span>
+        <div class="ph-wrap">
+        
+        </div>
+      </div>
+      <div class="product-name">Body Suit Cloud</div>
+      <div class="product-meta">5 màu pastel · Cúc bấm · Cotton GOTS</div>
+      <div class="product-footer">
+        <div class="product-price">285.000đ</div>
+        <button class="pre-btn" onclick="showToast()">Đặt trước</button>
+      </div>
+    </div>
+
+    <div class="product-card reveal" style="transition-delay:.1s">
+      <div class="product-img">
+        <!-- <img src="product-2.jpg" alt="Set Welcome Baby"> -->
+         <img src="be3.jpg" alt="Set Welcome Baby">
+        <span class="prod-badge">Set</span>
+        <div class="ph-wrap">
+        
+        </div>
+      </div>
+      <div class="product-name">Set Welcome Baby</div>
+      <div class="product-meta">Body + quần + mũ + găng tay · 0–3M</div>
+      <div class="product-footer">
+        <div class="product-price">990.000đ</div>
+        <button class="pre-btn" onclick="showToast()">Đặt trước</button>
+      </div>
+    </div>
+
+    <div class="product-card reveal" style="transition-delay:.2s">
+      <div class="product-img">
+        <!-- <img src="product-3.jpg" alt="Khăn Quấn Muslin"> -->
+         <img src="be4.jpg" alt="Set Welcome Baby">
+        <span class="prod-badge">Hot</span>
+        <div class="ph-wrap">
+      
+        </div>
+      </div>
+      <div class="product-name">Khăn Quấn Muslin</div>
+      <div class="product-meta">Muslin 4 lớp · 70×70cm · Siêu mềm</div>
+      <div class="product-footer">
+        <div class="product-price">195.000đ</div>
+        <button class="pre-btn" onclick="showToast()">Đặt trước</button>
+      </div>
+    </div>
+
+    <div class="product-card reveal" style="transition-delay:.3s">
+      <div class="product-img">
+        <!-- <img src="product-4.jpg" alt="Hộp Quà Full Moon"> -->
+         <img src="be5.png" alt="Set Welcome Baby">
+        <span class="prod-badge">Gift</span>
+        <div class="ph-wrap">
+        
+        </div>
+      </div>
+      <div class="product-name">Hộp Quà Full Moon</div>
+      <div class="product-meta">8 món · Hộp kraft · Thiệp handwritten</div>
+      <div class="product-footer">
+        <div class="product-price">1.490.000đ</div>
+        <button class="pre-btn" onclick="showToast()">Đặt trước</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="testimonials" id="testimonials">
+  <div class="test-header">
+    <p class="section-tag" style="justify-content:center">
+      <span style="flex:none">Đánh giá từ mẹ</span>
+    </p>
+    <h2 class="test-heading reveal">Những câu chuyện<br><em>từ gia đình thật</em></h2>
+    <p class="test-sub reveal">Không phải lời quảng cáo — đây là những gì mẹ thật sự nói.</p>
+  </div>
+  <div class="test-grid">
+    <div class="test-card reveal">
+      <div class="test-rating">
+        <div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div>
+      </div>
+      <p class="test-quote">"Con mình bị chàm sữa, mình lo lắng lắm khi thử sản phẩm mới. Sau 2 tuần mặc Happykids, da con không bị kích ứng thêm chút nào."</p>
+      <div class="test-author">
+        <div class="test-avatar"></div>
+        <div>
+          <div class="test-name">Chị Minh Thu, 28 tuổi</div>
+          <div class="test-role">Mẹ bé Khôi — 3 tháng tuổi</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="test-card reveal" style="transition-delay:.12s">
+      <div class="test-rating">
+        <div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div>
+      </div>
+      <p class="test-quote">"Mua làm quà đầy tháng cho bạn thân — bạn nhắn lại ngay là chưa bao giờ nhận được hộp quà baby nào đẹp và ý nghĩa đến vậy."</p>
+      <div class="test-author">
+        <div class="test-avatar"></div>
+        <div>
+          <div class="test-name">Chị Hà Anh, 32 tuổi</div>
+          <div class="test-role">Khách hàng thân thiết</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="test-card reveal" style="transition-delay:.24s">
+      <div class="test-rating">
+        <div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div>
+      </div>
+      <p class="test-quote">"Giặt 20 lần rồi vẫn như mới. Vải vẫn mềm, màu vẫn đẹp, không bị phai hay co. Đây là bộ đồ mình sẽ tiếp tục mua."</p>
+      <div class="test-author">
+        <div class="test-avatar"></div>
+        <div>
+          <div class="test-name">Chị Phương Linh, 30 tuổi</div>
+          <div class="test-role">Mẹ bé Song Nhi — 7 tháng tuổi</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="register" id="register">
+  <div class="reg-img">
+    <!-- <img src="your-register-image.jpg" alt="Happykids lifestyle"> -->
+     <img src="b5.jpg" alt="Set Welcome Baby">
+
+    <div class="ph-wrap">
+   
+    </div>
+  </div>
+
+  <div class="reg-form-wrap">
+    <p class="reg-tag">Đặt trước — Ưu đãi ra mắt</p>
+    <h2 class="reg-heading reveal">Đăng ký sớm,<br><em>ưu đãi 20%</em></h2>
+    <p class="reg-desc reveal">Giảm 20% + Miễn phí giao hàng + Hộp quà đặc biệt cho 200 mẹ đăng ký sớm nhất.</p>
+
+    <form id="regForm">
+      <div class="form-row-2">
+        <div class="form-field">
+          <label>Họ và tên</label>
+          <input type="text" placeholder="Nguyễn Thị..." required>
+        </div>
+        <div class="form-field">
+          <label>Số điện thoại</label>
+          <input type="tel" placeholder="09xx xxx xxx" required>
+        </div>
+      </div>
+      <div class="form-field">
+        <label>Email</label>
+        <input type="email" placeholder="me@email.com" required>
+      </div>
+      <div class="form-row-2">
+        <div class="form-field">
+          <label>Bé bao nhiêu tháng?</label>
+          <select required>
+            <option value="" disabled selected>Chọn...</option>
+            <option>Đang mang thai</option>
+            <option>0–3 tháng</option>
+            <option>3–6 tháng</option>
+            <option>6–12 tháng</option>
+            <option>Trên 12 tháng</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label>Sản phẩm quan tâm</label>
+          <select>
+            <option>Tất cả</option>
+            <option>Body Suit Cloud</option>
+            <option>Set Welcome Baby</option>
+            <option>Khăn Quấn Muslin</option>
+            <option>Hộp Quà Full Moon</option>
+          </select>
+        </div>
+      </div>
+      <button type="submit" class="submit-btn">Đăng ký nhận ưu đãi 20%</button>
+      <p class="form-note">Thông tin của bạn được bảo mật. Không spam.</p>
+    </form>
+
+    <div class="success-msg" id="successMsg">
+      <h3>Đăng ký thành công</h3>
+      <p>Chúng tôi sẽ liên hệ trước khi ra mắt để gửi ưu đãi đặc biệt.</p>
+    </div>
+
+    <div class="form-perks">
+      <span class="perk">Giảm 20% đơn đầu</span>
+      <span class="perk">Free ship</span>
+      <span class="perk">Truy cập sớm 48h</span>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <div>
+    <div class="footer-logo">Happy<span>kids</span></div>
+    <p>Nhẹ nhàng chăm sóc từ những ngày đầu đời — vì mỗi bé xứng đáng được yêu thương bằng điều tốt nhất.</p>
+  </div>
+  <div>
+    <h5>Sản phẩm</h5>
+    <ul>
+      <li><a href="#">Body Suit</a></li>
+      <li><a href="#">Bộ sơ sinh</a></li>
+      <li><a href="#">Khăn quấn</a></li>
+      <li><a href="#">Hộp quà</a></li>
+    </ul>
+  </div>
+  <div>
+    <h5>Công ty</h5>
+    <ul>
+      <li><a href="#">Về chúng tôi</a></li>
+      <li><a href="#">Cam kết</a></li>
+      <li><a href="#">Blog mẹ</a></li>
+      <li><a href="#">Liên hệ</a></li>
+    </ul>
+  </div>
+  <div>
+    <h5>Hỗ trợ</h5>
+    <ul>
+      <li><a href="#">Hướng dẫn size</a></li>
+      <li><a href="#">Đổi trả</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">1800 xxxx</a></li>
+    </ul>
+  </div>
+</footer>
+<div class="footer-bottom">© 2025 Happykids · Thương hiệu Việt Nam · Làm từ tình yêu</div>
+
+<div class="toast" id="toast">Đã thêm vào danh sách đặt trước</div>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal, .reveal-up').forEach(el => observer.observe(el));
+
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  });
+});
+
+function showToast() {
+  const t = document.getElementById('toast');
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 3000);
+}
+
+document.getElementById('regForm').addEventListener('submit', e => {
+  e.preventDefault();
+  document.getElementById('regForm').style.display = 'none';
+  document.getElementById('successMsg').classList.add('show');
+});
+</script>
+</body>
+</html>
